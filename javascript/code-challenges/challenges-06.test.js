@@ -23,11 +23,9 @@ Returns: ['dyoll', 'eimaj'];
 ------------------------------------------------------------------------------------------------ */
 
 const getNames = (arr) => {
-  let array = [];
-  arr.map((x) => {
-    let reversedName = [...x.name].reverse().join('');
-    array.push(reversedName);
-    console.log(array);
+  let array = arr.map((x) => {
+    return x.name.split('').reverse().join('');
+
   });
   return array;
 
