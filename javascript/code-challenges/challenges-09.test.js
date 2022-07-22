@@ -57,11 +57,12 @@ HR has asked you to change the data to make it easier to print so that it looks 
 ]
 
 ------------------------------------------------------------------------------------------------ */
-
+//answer from class example I need to come back and study this!
 const updateNumbers = (obj) => {
-  Object.values(obj) ? true : false};
-
-
+for (const [key, value] of Object.entries(obj)){
+  return (`${key}: ${value}`);
+}
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
@@ -126,9 +127,15 @@ For example:
 hasChildrenValues(characters, 'Cersei') will return true
 hasChildrenValues(characters, 'Sansa') will return false
 ------------------------------------------------------------------------------------------------ */
-
+//example answered in class I NEED TO STUDY THIS!!!
 const hasChildrenValues = (arr, character) => {
- what?
+let characterFromArray=arr.find(person=> person.name == character);
+for (let char of arr){
+  if (char.name == character){
+    characterFromArray = char;
+    return !!(Object.values(characterFromArray).length>3);
+  }
+}
 
 };
 /* ------------------------------------------------------------------------------------------------
